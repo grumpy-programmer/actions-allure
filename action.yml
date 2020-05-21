@@ -1,0 +1,42 @@
+name: 'Allure'
+description: 'Allure AWS S3 report uploader'
+author: 'Grumpy Programmer'
+inputs:
+  bucket-name:
+    description: 'AWS bucket for results'
+    required: true
+
+  bucket-results-path:
+    description: ''
+    required: false
+    default: results
+
+  allure-results-path:
+    description: ''
+    required: false
+    default: build/allure/results
+
+  allure-results-pattern:
+    description: ''
+    required: false
+    default: '*.json'
+
+  bucket-report-path:
+    description: ''
+    required: false
+    default: ''
+
+  allure-report-path:
+    description: ''
+    required: false
+    default: build/allure/report
+
+  allure-report-pattern:
+    description: ''
+    required: false
+    default: '**/*.*'
+
+runs:
+  using: 'node12'
+  main: 'dist/main/index.js'
+  post: 'dist/post/index.js'
