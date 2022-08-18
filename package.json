@@ -10,7 +10,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.9.1",
     "aws-sdk": "^2.680.0",
     "glob": "^7.1.6",
     "mime-types": "^2.1.27"
